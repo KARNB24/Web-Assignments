@@ -1,0 +1,31 @@
+<?php
+    ob_start();
+    require_once './config.php';
+    $username=$_REQUEST['username'];
+    $hashed_password= password_hash($_REQUEST['password'],PASSWORD_DEFAULT);
+    
+    $query="select username from tblUser where username='$username'";
+    $result= mysqli_query($conn, $query);
+    if(mysqli_num_rows($result)==1)
+    {
+        header('location:./signup.php?result=userexist');
+    }
+    else
+    {
+        $query = "insert into tblUser (username, password) values ('".$username."','".$hashed_password."')";
+        $result = mysqli_query($conn, $query);
+        
+        if ($result == 1)
+        {
+            header('location:signup.php?result=success');
+            
+        }
+        else
+        {
+            header('location:signup.php?result=fail');
+        }
+    }
+?>
+
+
+

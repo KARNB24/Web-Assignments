@@ -1,0 +1,71 @@
+/*
+Karn Bhavsar
+Student ID: 991578281
+SYST10199 - Web Programming
+*/
+/* 
+    Created on : Jan. 18, 2020, 5:21:13 p.m.
+    Author     : karnb
+*/
+
+body
+{
+    background-color: #FFEBCD;
+}
+
+
+
+.button
+{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.header
+{
+    grid-area: header;
+}
+
+.grid-container-header
+{
+  display: grid;
+  grid-template-areas: 'header';
+  grid-gap: 10px;
+  opacity: 0.5;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.grid-container-header > div 
+{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  border: 3px solid black;
+  border-style: groove;
+  border-radius: 25px;
+}
+
+hr
+{
+    border-top: 5px solid #ff8000;
+}
+
+li
+{
+    font-size: 20px;
+}
+
+
+
+
